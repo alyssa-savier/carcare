@@ -53,14 +53,14 @@ function Signup({ onLogin }) {
   };
 
   return (
-    <div id="signup-tab-content" class="tabcontent" style={{ display: "block" }}>
-      <form class="signup-form" action="" method="post" onSubmit={handleSignUpSubmit} >
-        <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email" value={email} onChange={handleEmailChange} />
-        <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username" value={username} onChange={handleUsernameChange} />
-        <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password" value={password} onChange={handlePasswordChange}/>
-        <input type="submit" class="button" value="Sign Up" />
+    <div id="signup-tab-content" className="tabcontent" style={{ display: "block" }}>
+      <form className="signup-form" action="" method="post" onSubmit={handleSignUpSubmit} >
+        <input type="email" className="input" id="user_email" autoComplete="off" placeholder="Email" value={email} onChange={handleEmailChange} />
+        <input type="text" className="input" id="user_name" autoComplete="off" placeholder="Username" value={username} onChange={handleUsernameChange} />
+        <input type="password" className="input" id="user_pass" autoComplete="off" placeholder="Password" value={password} onChange={handlePasswordChange}/>
+        <input type="submit" className="button" value="Sign Up" />
       </form>
-      <div class="help-text">
+      <div className="help-text">
         <p>By signing up, you agree to our Terms of service</p>
       </div>
     </div>
