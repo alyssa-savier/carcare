@@ -63,7 +63,14 @@ app.post('/signup', async (req, res) => {
 // API endpoint to calculate COE
 app.post('/calculate-coe', async (req, res) => {
   try {
-    const category = req.body.category;
+    const { category, year, month, round } = req.body;
+    
+    // Print out the parameters received from the frontend
+    console.log('Category:', category);
+    console.log('Year:', year);
+    console.log('Month:', month);
+    console.log('Round:', round);
+    
     const coePrice = await getCOEPriceFromModel(category);
     res.json({ coePrice });
   } catch (error) {
@@ -72,10 +79,11 @@ app.post('/calculate-coe', async (req, res) => {
   }
 });
 
+
 // Mock function to simulate fetching COE price from the ML model
 const getCOEPriceFromModel = async (category) => {
   // Placeholder for ML model prediction logic
-  return "15000"; // Return a mock COE price
+  return "16000"; // Return a mock COE price
 };
 
 // Start the server

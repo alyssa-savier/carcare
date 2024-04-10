@@ -225,12 +225,28 @@ body {
   margin-top: 20px; /* Add space between "Welcome" message and controls */
 }
 
-.dropdown {
+.dropdown,
+.input {
   padding: 10px;
   font-size: 1em;
   border-radius: 5px;
   margin-right: 10px; /* Add space between dropdown and button */
+  border: 1px solid #cfcfcf; /* Add border */
+  background-color: #fff; /* Set background color */
+  width: 150px; /* Adjust width as needed */
 }
+
+.dropdown:focus,
+.input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #4CAF50; /* Add custom focus border color */
+}
+
+.dropdown::placeholder,
+.input::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
 
 .calculate-button {
   padding: 15px 30px;
